@@ -22,6 +22,7 @@ module.exports = (env) => ({
       landmarks: path.resolve(srcPath, "js/landmarks"),
       scss: path.resolve(srcPath, "scss/"),
       assets: path.resolve(srcPath, "assets/"),
+      variables: path.resolve(srcPath, "scss/variables")
     },
     extensions: [".js", ".jsx"],
   },
@@ -50,7 +51,7 @@ module.exports = (env) => ({
         ],
       },
       {
-        test: /\.(png|jpg|jpeg|gif|svg)$/,
+        test: /\.(png|jpg|jpeg|gif|svg|woff|woff2)$/,
         use: [
           {
             loader: "file-loader",
