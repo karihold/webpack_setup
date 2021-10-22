@@ -67,9 +67,11 @@ module.exports = (env) => ({
   },
   devServer: {
     open: true,
-    writeToDisk: true,
-    contentBase: distPath,
+    static: distPath,
     historyApiFallback: true,
-    port: "8080",
+    port: '8080',
+    devMiddleware: {
+      writeToDisk: true,
+    },
   },
 });
